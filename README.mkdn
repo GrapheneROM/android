@@ -1,9 +1,9 @@
-GrapheneROM: Optomized Carbon
+Graphene: Optimized Carbon
 ===========
 
 Getting Started
 ---------------
-To get started with the Carbonv sources, you'll need to get
+To get started with the Carbon sources, you'll need to get
 familiar with [Git and Repo](http://source.android.com/source/version-control.html).
 
 
@@ -46,7 +46,7 @@ Building the System
 ---------------
 It's easy to build with a custom script I made, based off of Liquidsmooth's and AOSPAL's.
 
-Build LiquidSmooth with the following command
+Build Graphene with the following command
 
     bash build.sh {options} {device}
 
