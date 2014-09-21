@@ -15,13 +15,10 @@ usage()
     echo -e "    -j# Set jobs"
     echo -e "    -s  Sync before build"
     echo -e "    -p  Build using pipe"
-    echo -e "    -o# Select GCC O Level"
-    echo -e "        Valid O Levels are"
-    echo -e "        1 (Os) or 3 (O3)"
     echo -e "    -v  Verbose build output"
     echo -e ""
     echo -e ${txtbld}"  Example:"${txtrst}
-    echo -e "    bash build.sh -p -o3 -j18 hammerhead"
+    echo -e "    bash build.sh -p -j18 hammerhead"
     echo -e ""
     exit 1
 }
@@ -95,7 +92,6 @@ opt_initlogo=0
 opt_jobs="$CPUS"
 opt_sync=0
 opt_pipe=0
-opt_olvl=0
 opt_verbose=0
 
 while getopts "c:dij:pso:v" opt; do
@@ -106,7 +102,6 @@ while getopts "c:dij:pso:v" opt; do
     j) opt_jobs="$OPTARG" ;;
     s) opt_sync=1 ;;
     p) opt_pipe=1 ;;
-    o) opt_olvl="$OPTARG" ;;
     v) opt_verbose=1 ;;
     *) usage
     esac
@@ -121,7 +116,7 @@ device="$1"
 eval $(grep "^CARBON_VERSION_" vendor/carbon/config/common.mk | sed 's/ *//g')
 VERSION="$CARBON_VERSION_MAJOR.$CARBON_VERSION_MINOR.$CARBON_VERSION_MAINTENANCE"
 
-echo -e ${cya}"Syntheszing ${ppl}carbon nano tubes ${bldylw}$VERSION"${txtrst}
+echo -e ${cya}"Syntheszing ${ppl}Graphne ${bldylw}$VERSION"${txtrst}
 
 if [ "$opt_clean" -eq 1 ]; then
     make clean >/dev/null
@@ -182,22 +177,6 @@ fi
 
 if [ "$opt_pipe" -ne 0 ]; then
     export TARGET_USE_PIPE=true
-fi
-
-if [ "$opt_olvl" -eq 1 ]; then
-    export TARGET_USE_O_LEVEL_S=true
-    echo -e ""
-    echo -e ${bldgrn}"Using Os Optimization"${txtrst}
-    echo -e ""
-elif [ "$opt_olvl" -eq 3 ]; then
-    export TARGET_USE_O_LEVEL_3=true
-    echo -e ""
-    echo -e ${bldgrn}"Using O3 Optimization"${txtrst}
-    echo -e ""
-else
-    echo -e ""
-    echo -e ${bldgrn}"Using the default GCC Optimization Level, O2"${txtrst}
-    echo -e ""
 fi
 
 # lunch device
