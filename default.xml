@@ -25,6 +25,11 @@
            fetch="git://github.com/"
            sync-c="true"
            sync-j="4" />
+           
+  <remote  name="bb"
+           fetch="https://bitbucket.org/"
+           sync-c="true"
+           sync-j="4" />
 
   <remote  name="sf"
            fetch="git://git.code.sf.net/p/"
@@ -499,6 +504,11 @@
   <project path="tools/studio/cloud" name="platform/tools/studio/cloud" groups="notdefault,tools" remote="aosp" revision="refs/tags/android-4.4.4_r2" />
   <project path="tools/swt" name="platform/tools/swt" groups="notdefault,tools" remote="aosp" revision="refs/tags/android-4.4.4_r2" />
   <project path="vendor/carbon" name="CarbonDev/android_vendor_carbon" />
+  <project name="CarbonDev/android_device_samsung_d2lte" path="device/samsung/d2lte" remote="cr" revision="kk" />
+  <project name="CyanogenMod/android_device_samsung_qcom-common" path="device/samsung/qcom-common" remote="cm" revision="cm-11.0" />
+  <project name="CyanogenMod/android_device_samsung_msm8960-common" path="device/samsung/msm8960-common" remote="cm" revision="cm-11.0" />
+  <project name="gideonx/bms-jb-3.4.y" path="kernel/samsung/d2" remote="bb" revision="cm-11.0" />
+  <project name="proprietary_vendor_samsung" path="vendor/samsung" remote="tm" revision="cm-11.0" />
   <project path="platform_manifest" name="frap129/android" remote="gh" revision="kk">
     <copyfile src="scripts/build.sh" dest="build.sh" />
   </project>
