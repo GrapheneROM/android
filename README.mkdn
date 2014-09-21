@@ -1,9 +1,5 @@
-GrapheneROM
+GrapheneROM: Optomized Carbon
 ===========
-Optomized Carbon
-----------------
-
-
 
 Getting Started
 ---------------
