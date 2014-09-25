@@ -171,11 +171,16 @@ echo -e ""
 echo -e ${bldblu}"Starting Optimization"${txtrst}
 
 # start compilation
+echo -e ${cya}"Using O3 Because Fuck O2"
+export TARGET_USE_O3=true
+
 if [ "$opt_dex" -ne 0 ]; then
+    echo -e ${cya}"ODEXing ROM"
     export WITH_DEXPREOPT=true
 fi
 
 if [ "$opt_pipe" -ne 0 ]; then
+    echo -e ${cya}"I honestly have no clue that this does, but it sounds cool."
     export TARGET_USE_PIPE=true
 fi
 
