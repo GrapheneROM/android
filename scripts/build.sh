@@ -187,7 +187,7 @@ fi
 # lunch device
 echo -e ""
 echo -e ${bldblu}"Compiling ROM"${txtrst}
-brunch "carbon_$device-user -j$opt_jobs" ;
+brunch "carbon_$device-user -j$opt_jobs -d -e" && make "carbon -j$opt_jobs";
 
 # cleanup unused built
 rm -f $OUTDIR/target/product/$device/carbon_*-ota*.zip
