@@ -504,7 +504,7 @@
   <project path="tools/motodev" name="platform/tools/motodev" groups="notdefault,motodev" remote="aosp" revision="refs/tags/android-4.4.4_r2" />
   <project path="tools/studio/cloud" name="platform/tools/studio/cloud" groups="notdefault,tools" remote="aosp" revision="refs/tags/android-4.4.4_r2" />
   <project path="tools/swt" name="platform/tools/swt" groups="notdefault,tools" remote="aosp" revision="refs/tags/android-4.4.4_r2" />
-  <project path="vendor/carbon" name="CarbonDev/android_vendor_carbon" />
+  <project path="vendor/carbon" name="CarbonDev/android_vendor_carbon" remote="cr" revision="kk" />
   <project name="CarbonDev/android_device_samsung_d2lte" path="device/samsung/d2lte" remote="cr" revision="kk" />
   <project name="CyanogenMod/android_device_samsung_qcom-common" path="device/samsung/qcom-common" remote="cm" revision="cm-11.0" />
   <project name="CyanogenMod/android_device_samsung_msm8960-common" path="device/samsung/msm8960-common" remote="cm" revision="cm-11.0" />
